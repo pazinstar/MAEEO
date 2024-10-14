@@ -86,25 +86,26 @@
             <div class="row g-0">
                 <div class="col-lg-7">
                     <div class="bg-primary h-100 p-5">
-                        <form>
+                        <form action="send_email.php" method="POST">
                             <div class="row g-3">
                                 <div class="col-6">
-                                    <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" name="name" class="form-control bg-light border-0 px-4" placeholder="Your Name" style="height: 55px;" required>
                                 </div>
                                 <div class="col-6">
-                                    <input type="email" class="form-control bg-light border-0 px-4" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" name="email" class="form-control bg-light border-0 px-4" placeholder="Your Email" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control bg-light border-0 px-4" placeholder="Subject" style="height: 55px;">
+                                    <input type="text" name="subject" class="form-control bg-light border-0 px-4" placeholder="Subject" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0 px-4 py-3" rows="2" placeholder="Message"></textarea>
+                                    <textarea name="message" class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -156,15 +157,16 @@
                         <h4 class="text-white mb-4">Get In Touch</h4>
                         <div class="d-flex mb-2">
                             <i class="bi bi-geo-alt text-white me-2"></i>
-                            <p class="text-white mb-0">Peter Mulei Building, Masii Town, Machakos</p>
+                            <p class="text-white mb-0">Kenya Goshen Enterprises Building, <br>
+                                P.O. Box 2342 Machakos</p>
                         </div>
                         <div class="d-flex mb-2">
                             <i class="bi bi-envelope-open text-white me-2"></i>
-                            <p class="text-white mb-0">elijah.mutungi69@yahoo.com</p>
+                            <p class="text-white mb-0">elijah_mutungi@yahoo.com</p>
                         </div>
                         <div class="d-flex mb-2">
                             <i class="bi bi-telephone text-white me-2"></i>
-                            <p class="text-white mb-0">0722-469720</p>
+                            <p class="text-white mb-0">0723-046988</p>
                         </div>
                         <div class="d-flex mt-4">
                             <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -213,11 +215,33 @@
         </div>
     </div>
 </div>
+
 <div class="container-fluid bg-dark text-white py-4">
     <div class="container text-center">
         <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">MAEEO</a>. All Rights Reserved. Designed by <a class="text-secondary fw-bold" href="https://pazinstar.github.io/Portfolio/"> Kelvin Mukaria</a></p>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+    $('form').submit(function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        $.ajax({
+            url: $(this).attr('action'),
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+                alert(response); // Display the response from the server
+            },
+            error: function() {
+                alert('Error: Unable to send message.');
+            }
+        });
+    });
+});
+
+</script>
 <!-- Footer End -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
