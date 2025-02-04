@@ -11,7 +11,38 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
     <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/tooplate-style.css">                                   <!-- Templatemo style -->
+    <link rel="stylesheet" href="css/tooplate-style.css">    
+    <style>/* Remove blue overlay */
+        .tm-gallery-item img {
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .tm-gallery-item:hover img {
+            transform: scale(1.5);
+        }
+        
+        /* Maintain spacing and styling */
+        .tm-gallery-item {
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        .tm-figcaption {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        
+        .tm-gallery-item:hover .tm-figcaption {
+            color:transparent;
+        }
+        
+    </style>                               <!-- Templatemo style -->
 
 </head>
 
@@ -33,7 +64,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="d-flex align-items-center justify-content-end">
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-x"><STRong>X</STRong></i></a>
                     <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
@@ -71,65 +102,60 @@ This platform is developed to support Mundu Agricultural Environmental and Educa
                         <div class="row">
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a>
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src="img/image-01.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
-                                    <p class="tm-figcaption">Thriving Crops</p>
+                                  
+                                        <img src="img/PREP.jpg" alt="Image" class="img-fluid tm-img-center">
+                                 
+                                    <p class="tm-figcaption">Land Preparation</p>
                                 </a>
                             </figure>
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a >
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src="img/image-02.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
-                                    <p class="tm-figcaption">Sustainable Harvest</p>
+                       
+                                        <img src="img/TRAINING.jpg" alt="Image" class="img-fluid tm-img-center">
+                               
+                                    <p class="tm-figcaption">Trainings</p>
                                 </a>
                             </figure>
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a >
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src="img/image-03.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
+                                 
+                                        <img src="img/bananas.jpg" alt="Image" class="img-fluid tm-img-center">
+                                 
                                     <p class="tm-figcaption">Green Revolution</p>
                                 </a>
                             </figure>
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a >
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src="img/image-05.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
+                                   
+                                        <img src="img/wide.jpeg" alt="Image" class="img-fluid tm-img-center">
+                                  
                                     <p class="tm-figcaption">Healthy Soil</p>
                                 </a>
                             </figure>
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a >
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src=" img/image-04.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
+                                   
+                                        <img src=" img/organic.jpeg" alt="Image" class="img-fluid tm-img-center">
+                             
                                     <p class="tm-figcaption">Bountiful Yields</p>
                                 </a>
                             </figure>
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a >
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src="img/image-06.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
+                                        <img src="img/organical.jpeg" alt="Image" class="img-fluid tm-img-center">
                                     <p class="tm-figcaption">Organic Farming</p>
                                 </a>
                             </figure>
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a >
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src="img/image-07.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
+                                   
+                                        <img src="img/shallow.jpg" alt="Image" class="img-fluid tm-img-center">
                                     <p class="tm-figcaption">Farm to Table</p>
                                 </a>
                             </figure>
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a>
-                                    <div class="tm-gallery-item-overlay">
-                                        <img src="img/image-08.jpg" alt="Image" class="img-fluid tm-img-center">
-                                    </div>
+                                        <img src="img/planting.jpg" alt="Image" class="img-fluid tm-img-center">
                                     <p class="tm-figcaption">Agricultural Progress</p>
                                 </a>
                             </figure>
@@ -147,24 +173,7 @@ This platform is developed to support Mundu Agricultural Environmental and Educa
                     </nav>
                 </section>
 
-                <section class="media tm-highlight tm-highlight-w-icon">
-
-                    <div class="tm-highlight-icon">
-                        <!-- <i class="fa tm-fa-6x fa-meetup"></i>     -->
-                         <img width="80px" height="80px" src="../imgs/logo0.png" alt="">
-                    </div>                    
-
-                    <div class="media-body">
-                        <header>
-                            <h2>Need Help?</h2>
-                        </header>
-                        <p class="tm-margin-b">
-                            Have questions or need assistance? Reach out to MAEEO for support with sustainable agricultural, environmental, and educational initiatives. We're here to help you make a positive impact.
-                        </p>
-                        <a href="../contact.html" class="tm-white-bordered-btn">Contact Us</a>
-                    </div>
-                                    
-                </section>
+           
             </div>
 
            

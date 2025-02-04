@@ -60,10 +60,7 @@ button:focus { outline: none; }
 	background-color: #ededed;
 }
 
-.tm-btn-gray:hover,
-.tm-btn-gray:focus {
-	background-color: #c6c6c6;
-}
+
 
 .tm-blue-text { color: #186e9d; }
 .tm-green-text { color: #C5F9D0; }
@@ -163,12 +160,7 @@ button:focus { outline: none; }
 }
 
 /* https://codepen.io/nxworld/pen/ZYNOBZ */
-.tm-gallery-item-overlay {
-	background: #0066CC;
-	max-width: 240px;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 
 .tm-gallery-item:hover img { opacity: 0.5; }
 .tm-gallery-item:hover .tm-figcaption {	color: #186e9d; }

@@ -11,6 +11,10 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -51,7 +55,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="d-flex align-items-center justify-content-end">
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-x"><STRong>X</STRong></i></a>
                     <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
@@ -62,16 +66,43 @@
     <!-- Topbar End -->
 
  <!-- Navbar Start -->
- <nav class="navbar bg-primary navbar-dark shadow-sm py-3 px-3 px-lg-5">
-   
-    <div class="d-flex mx-auto" style="justify-content: space-around; flex-wrap: wrap;">
-        <a href="index.html" class="nav-item nav-link text-white" style="padding: 10px 15px; font-size: 16px; font-weight: 600;">Home</a>
-        <a href="about.html" class="nav-item nav-link text-white" style="padding: 10px 15px; font-size: 16px; font-weight: 600;">About</a>
-        <a href="service.html" class="nav-item nav-link text-white" style="padding: 10px 15px; font-size: 16px; font-weight: 600;">Service</a>
-        <a href="contact.html" class="nav-item nav-link text-white" style="padding: 10px 15px; font-size: 16px; font-weight: 600;">Contact</a>
-        <a href="gallery/gallery.html" class="nav-item nav-link text-white" style="padding: 10px 15px; font-size: 16px; font-weight: 600;">Gallery</a>
+ <nav class="navbar">
+
+    <label for="menu-toggle" class="hamburger">☰</label>
+    <input type="checkbox" id="menu-toggle">
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+          <div class="dropdown">
+                <a class="dropdown-button">
+                    Get Involved <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="soon.html">
+                        <i class="fas fa-handshake"></i> Volunteer
+                    </a>
+                    <a href="donate.html">
+                        <i class="fas fa-donate"></i> Donate
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-users"></i> Partner With Us
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-calendar-alt"></i> Attend Events
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-gavel"></i> Tenders
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-briefcase"></i> Careers
+                    </a>
+                </div>
+            </div>
+            </div>
     </div>
-    
 </nav>
     <!-- Navbar End -->
 
@@ -89,6 +120,8 @@
             <div class="row g-0">
                 <div class="col-lg-7">
                     <div class="bg-primary h-100 p-5">
+                        <script src="https://www.google.com/recaptcha/api.js?render=6LddmccqAAAAAMVhZ9Lnmg0dhsHLzOziuF9pB8xl"></script>
+
                         <form action="send_email.php" method="POST">
                             <div class="row g-3">
                                 <div class="col-6">
@@ -103,12 +136,13 @@
                                 <div class="col-12">
                                     <textarea name="message" class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message" required></textarea>
                                 </div>
-                                <div class="col-12">
+                                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                                 <div class="col-12">
                                     <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
-                        
+                     
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -148,7 +182,14 @@
         </div>
     </div>
     <!-- Contact End -->
-
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LddmccqAAAAAMVhZ9Lnmg0dhsHLzOziuF9pB8xl', {action: 'submit'}).then(function(token) {
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
+    
 
   <!-- Footer Start -->
   <div class="container-fluid bg-footer bg-primary text-white mt-5">
@@ -172,7 +213,7 @@
                             <p class="text-white mb-0">0722 469 720</p>
                         </div>
                         <div class="d-flex mt-4">
-                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-x"><STRong>X</STRong></i></a>
                             <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a class="btn btn-secondary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
@@ -224,8 +265,73 @@
         <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">MAEEO</a>. All Rights Reserved. Designed by <a class="text-secondary fw-bold" href="https://pazinstar.github.io/Portfolio/"> Kelvin Mukaria</a></p>
     </div>
 </div>
+<style>
+     .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .popup.success {
+            border: 2px solid #4CAF50;
+        }
+
+        .popup.error {
+            border: 2px solid #f44336;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+    
+</style>
+<?php if ($message): ?>
+        <div class="popup-overlay" id="popup-overlay">
+            <div class="popup <?= $messageType ?>">
+                <p><?= htmlspecialchars($message) ?></p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <script>
+        function closePopup() {
+            const popupOverlay = document.getElementById('popup-overlay');
+            if (popupOverlay) {
+                popupOverlay.remove();
+            }
+        }
+    </script>
 
 <script>
+  
     $(document).ready(function() {
     $('form').submit(function(event) {
         event.preventDefault(); // Prevent default form submission
