@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         ";
 
        // Send email
-            $mail->send();
+            //$mail->send();
             $message = "Message sent successfully!";
             $messageType = 'success';
         } catch (Exception $e) {
